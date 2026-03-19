@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Minuta del volun</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:#eaf4ff;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#2b5dab;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+textarea{
+    height:120px;
+}
+
+button{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    background:#3b82f6;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2563eb;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Minuta del volun</h1>
+
+<form action="/generar" method="post">
+
+<label>Fecha</label>
+<input type="date" name="fecha">
+
+<label>Cocinamos:</label>
+<input type="text" name="Cocinamos">
+
+<label>Cantidad de viandas</label>
+<input type="number" name="viandas">
+
+<label>Qué se usó del stock:</label>
+<textarea name="stock"></textarea>
+
+<label>Qué falta comprar:</label>
+<textarea name="comprar"></textarea>
+
+<label>Novedades del CC:</label>
+<input type="text" name="Novedades">
+
+<label>Jornada en plaza:</label>
+<input type="text" name="Jornada">
+
+<label>Comentarios:</label>
+<input type="text" name="Comentarios">
+
+<label>Kits de higiene entregados:</label>
+<input type="number" name="Kits">
+
+<label>Bidones de bebidas usados:</label>
+<input type="number" name="Bidones">
+
+<label>Las llaves se las quedó</label>
+<input type="text" name="Llaves">
+
+<button type="submit">Generar PDF</button>
+
+<button type="submit" formaction="/ver_texto" formtarget="_blank">
+Ver texto
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
